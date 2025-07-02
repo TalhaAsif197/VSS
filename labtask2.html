@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Button Switch</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .box {
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body class="container text-center py-5">
+
+  
+  <div class="row">
+    <div class="col-lg-3">
+      <button class="btn btn-primary m-1" onclick="showBox('bt1')">JF-17</button>
+    </div>
+    <div class="col-lg-3">
+      <button class="btn btn-secondary m-1" onclick="showBox('bt2')">RAFALE</button>
+    </div>
+    <div class="col-lg-3">
+      <button class="btn btn-success m-1" onclick="showBox('bt3')">PAK ARMY</button>
+    </div>
+    <div class="col-lg-3">
+      <button class="btn btn-danger m-1" onclick="showBox('bt4')">INDIAN ARMY</button>
+    </div>
+  </div>
+
+  <div id="bt1" class="box">
+    <img src="download (1).jpg" class="img-fluid" alt="JF-17">
+  </div>
+  <div id="bt2" class="box">
+    <img src="Dassault_Rafale_on_USS_Dwight_D._Eisenhower.jpg" class="img-fluid" alt="Rafale">
+  </div>
+  <div id="bt3" class="box">
+    <img src="download.jpg" class="img-fluid" alt="Pak Army">
+  </div>
+  <div id="bt4" class="box">
+    <img src="Indian-Army-Logo.png" class="img-fluid" alt="Indian Army">
+  </div>
+
+  <script>
+    function showBox(id) {
+      document.querySelectorAll('.box').forEach(div => {
+        div.style.display = 'none';
+      });
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
